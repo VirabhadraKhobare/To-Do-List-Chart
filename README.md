@@ -7,10 +7,10 @@ An interactive and visually appealing **To-Do List Chart** built with **React.js
 ✅ Remove completed tasks easily  
 ✅ Smooth animations using **Framer Motion**  
 ✅ Responsive and user-friendly UI  
-✅ Simple and clean code structure  
+✅ Simple and clean code structure 
 
 ## 🖥️ Live Demo
-[🔗 View Live Project](#) *(Add your deployment link here)*
+[🔗 View Live Project](#todolistchartviru.netlify.app) *(Add your deployment link here)*
 
 ---
 
