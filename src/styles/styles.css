@@ -1,107 +1,110 @@
+/* General Page Styling */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f9fa;
-  }
-  
-  .container {
-    max-width: 400px;
-    margin: 20px auto;
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .task-list {
-    margin-top: 20px;
-  }
-  
-  .task-item {
-    display: flex;
-    justify-content: space-between;
-    background: #fff;
-    padding: 10px;
-    margin: 5px 0;
-    border-radius: 5px;
-    border: 1px solid #ddd;
-  }
-  
-  button {
-    background: red;
-    color: white;
-    border: none;
-    padding: 5px;
-    cursor: pointer;
-  }
-
-import React, { useState } from "react";
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { List, ListItem } from "@/components/ui/list";
-import { motion } from "framer-motion";
-import { Trash2 } from "lucide-react";
-import "../styles/styles.css";
-
-export default function TodoList() {
-  const [tasks, setTasks] = useState([]);
-  const [taskTitle, setTaskTitle] = useState("");
-  const [taskSummary, setTaskSummary] = useState("");
-
-  const addTask = () => {
-    if (taskTitle.trim() && taskSummary.trim()) {
-      setTasks([...tasks, { title: taskTitle, summary: taskSummary }]);
-      setTaskTitle("");
-      setTaskSummary("");
-    }
-  };
-
-  const removeTask = (index) => {
-    setTasks(tasks.filter((_, i) => i !== index));
-  };
-
-  return (
-    <div className="container">
-      <Card className="todo-card">
-        <h2 className="title">Daily To-Do List</h2>
-        <Input
-          placeholder="Task Title"
-          value={taskTitle}
-          onChange={(e) => setTaskTitle(e.target.value)}
-          className="input"
-        />
-        <Textarea
-          placeholder="Task Summary"
-          value={taskSummary}
-          onChange={(e) => setTaskSummary(e.target.value)}
-          className="textarea"
-        />
-        <Button onClick={addTask} className="add-button">Add Task</Button>
-      </Card>
-
-      <List className="task-list">
-        {tasks.map((task, index) => (
-          <motion.div
-            key={index}
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
-          >
-            <Card className="task-item">
-              <div>
-                <h3 className="task-title">{task.title}</h3>
-                <p className="task-summary">{task.summary}</p>
-              </div>
-              <Button variant="ghost" onClick={() => removeTask(index)} className="delete-button">
-                <Trash2 className="icon" />
-              </Button>
-            </Card>
-          </motion.div>
-        ))}
-      </List>
-    </div>
-  );
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
 }
 
-  
+/* Container */
+.container {
+  width: 400px;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Title */
+.title {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+
+/* Input Fields */
+.input, .textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+/* Add Button */
+.add-button {
+  width: 100%;
+  padding: 10px;
+  background: #3498db;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.add-button:hover {
+  background: #2980b9;
+}
+
+/* Task List */
+.task-list {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Task Item */
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ecf0f1;
+  padding: 12px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.task-item:hover {
+  background: #d5dbdb;
+}
+
+/* Task Title */
+.task-title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #34495e;
+}
+
+/* Task Summary */
+.task-summary {
+  font-size: 14px;
+  color: #7f8c8d;
+}
+
+/* Delete Button */
+.delete-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  color: #e74c3c;
+  transition: 0.3s;
+}
+
+.icon:hover {
+  color: #c0392b;
+}
