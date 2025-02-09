@@ -18,8 +18,11 @@ body {
   background: rgba(255, 255, 255, 0.15);
   border-radius: 20px;
   box-shadow: 0px 10px 40px rgba(255, 255, 255, 0.1);
-  text-align: center;
+  text-align: left;
   backdrop-filter: blur(15px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* Title */
@@ -29,6 +32,8 @@ body {
   margin-bottom: 15px;
   color: #ffffff;
   text-transform: uppercase;
+  text-align: center;
+  width: 100%;
 }
 
 /* Input Fields */
@@ -43,6 +48,7 @@ body {
   color: #ffffff;
   outline: none;
   transition: all 0.3s ease-in-out;
+  display: block;
 }
 
 .input::placeholder, .textarea::placeholder {
@@ -67,6 +73,8 @@ body {
   font-size: 16px;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2), -4px -4px 10px rgba(255, 255, 255, 0.1);
   transition: 0.3s;
+  display: block;
+  text-align: center;
 }
 
 .add-button:hover {
@@ -80,6 +88,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 12px;
+  width: 100%;
 }
 
 /* Task Item - Glassmorphism */
@@ -93,6 +102,7 @@ body {
   transition: 0.3s;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(10px);
+  width: 100%;
 }
 
 .task-item:hover {
@@ -105,12 +115,16 @@ body {
   font-size: 16px;
   font-weight: bold;
   color: #ffffff;
+  flex: 1;
+  text-align: left;
 }
 
 /* Task Summary */
 .task-summary {
   font-size: 14px;
   color: rgba(255, 255, 255, 0.7);
+  flex: 2;
+  text-align: left;
 }
 
 /* Delete Button */
@@ -119,6 +133,7 @@ body {
   border: none;
   cursor: pointer;
   transition: 0.3s;
+  flex: 0;
 }
 
 .icon {
