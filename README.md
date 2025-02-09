@@ -10,7 +10,7 @@ An interactive and visually appealing **To-Do List Chart** built with **React.js
 ✅ Simple and clean code structure 
 
 ## 🖥️ Live Demo
-[🔗 View Live Project](#https://todolistchartviru.netlify.app/) *(Add your deployment link here)*
+[🔗 View Live Project](https://todolistchartviru.netlify.app/) 
 
 ---
 
