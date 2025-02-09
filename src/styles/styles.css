@@ -1,7 +1,7 @@
-/* General Page Styling */
+/* Global Styles */
 body {
   font-family: "Poppins", sans-serif;
-  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+  background: linear-gradient(135deg, #f0f2f5, #c9d6ff);
   color: #333;
   display: flex;
   justify-content: center;
@@ -10,49 +10,59 @@ body {
   margin: 0;
 }
 
-/* Container */
+/* Main Container */
 .container {
-  width: 400px;
-  padding: 20px;
-  background: white;
-  border-radius: 12px;
-  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+  width: 420px;
+  padding: 25px;
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.15);
   text-align: center;
 }
 
 /* Title */
 .title {
-  font-size: 22px;
+  font-size: 24px;
   font-weight: bold;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   color: #2c3e50;
+  text-transform: uppercase;
 }
 
 /* Input Fields */
 .input, .textarea {
   width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
+  padding: 12px;
+  margin-bottom: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
   font-size: 14px;
+  transition: all 0.3s ease-in-out;
+}
+
+.input:focus, .textarea:focus {
+  border-color: #3498db;
+  box-shadow: 0px 0px 8px rgba(52, 152, 219, 0.3);
+  outline: none;
 }
 
 /* Add Button */
 .add-button {
   width: 100%;
-  padding: 10px;
-  background: #3498db;
+  padding: 12px;
+  background: linear-gradient(135deg, #3498db, #6ab0de);
   color: white;
   border: none;
-  border-radius: 6px;
+  border-radius: 8px;
   cursor: pointer;
   font-weight: bold;
+  font-size: 16px;
   transition: 0.3s;
 }
 
 .add-button:hover {
-  background: #2980b9;
+  background: linear-gradient(135deg, #2980b9, #4b91d1);
+  transform: scale(1.05);
 }
 
 /* Task List */
@@ -60,7 +70,7 @@ body {
   margin-top: 15px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 12px;
 }
 
 /* Task Item */
@@ -68,14 +78,16 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #ecf0f1;
-  padding: 12px;
-  border-radius: 8px;
+  background: #f8f9fa;
+  padding: 14px;
+  border-radius: 10px;
   transition: 0.3s;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05);
 }
 
 .task-item:hover {
-  background: #d5dbdb;
+  background: #e9ecef;
+  transform: translateY(-3px);
 }
 
 /* Task Title */
@@ -96,15 +108,17 @@ body {
   background: none;
   border: none;
   cursor: pointer;
+  transition: 0.3s;
 }
 
 .icon {
-  width: 20px;
-  height: 20px;
+  width: 22px;
+  height: 22px;
   color: #e74c3c;
   transition: 0.3s;
 }
 
 .icon:hover {
   color: #c0392b;
+  transform: scale(1.2);
 }
